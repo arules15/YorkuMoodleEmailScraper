@@ -44,8 +44,7 @@ public class Scraper {
 		List<WebElement> d = driver.findElements(By.className("info"));
 		for (WebElement x: d) {
 			String parts[] = x.getText().split("City/town:");
-			String part[] = parts[0].split("Email Address:");
-			emails = emails + "\n" +  part[0];
+			emails = emails + "\n" +  parts[0];
 		}
 		return emails;
 	   
